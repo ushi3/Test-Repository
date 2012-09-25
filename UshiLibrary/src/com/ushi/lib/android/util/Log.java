@@ -42,6 +42,16 @@ public class Log {
 	}
 
 	/**
+	 * {@link android.util.Log#wtf(String, String)} のラッパ.
+	 *
+	 * @param obj
+	 *            出力するメッセージ
+	 */
+	public static void wtf(Object obj) {
+		android.util.Log.wtf(Util.getClassName(1), obj != null ? obj.toString() : null);
+	}
+
+	/**
 	 * {@link android.util.Log#w(String, String, Throwable)} のラッパ.
 	 *
 	 * @param th
